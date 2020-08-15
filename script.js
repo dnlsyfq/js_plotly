@@ -323,3 +323,10 @@ var layout = {
             ay:-40
          }]
 };
+
+// configuration options
+
+Plotly.newPlot('divID',data,layout,
+    {displayModeBar:true},
+    {displaylogo:true}
+);
