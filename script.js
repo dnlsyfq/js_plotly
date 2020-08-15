@@ -224,32 +224,102 @@
 
 // combo
 
-var trace1 = {
-    x:['Milk','Eggs','Bread','Cheese','Pasta'],
-    y:[1,4,2,1,3],
-    type:'bar'
-};
+// var trace1 = {
+//     x:['Milk','Eggs','Bread','Cheese','Pasta'],
+//     y:[1,4,2,1,3],
+//     type:'bar'
+// };
 
-var trace2 = {
-    x:['Milk','Eggs','Bread','Cheese','Pasta'],
-    y:[0.07,0.46,0.15,0.07,0.23],
-    xaxis:'x2',
-    yaxis:'y2',
-    type:'scatter'
-};
+// var trace2 = {
+//     x:['Milk','Eggs','Bread','Cheese','Pasta'],
+//     y:[0.07,0.46,0.15,0.07,0.23],
+//     xaxis:'x2',
+//     yaxis:'y2',
+//     type:'scatter'
+// };
 
-var data = [trace1,trace2]
+// var data = [trace1,trace2]
+
+// var layout = {
+//     title:'Groceries',
+//     yaxis2:{
+//         domain:[0.8,1],
+//         anchor:'x2'
+//     },
+//     xaxis2:{
+//         domain:[0.8,1],
+//         anchor:'y2'
+//     }
+// }
+
+// Plotly.newPlot('combo',data,layout);
+
+// responsive
+
+// var xValue = ["Basketball","Baseball","Tennis","Track","Soccer"]
+// var yValue = [20,40,10,15,15]
+
+// var trace1 = {
+//     x:xValue,
+//     y:yValue,
+//     type:'bar',
+//     name:'USA',
+//     text:yValue.map(String),
+//     textposition:'auto',
+//     hoverinfo:'none'
+// };
+
+// var data = [trace1]
+
+// var layout = {
+//     barmode:'stack',
+//     autosize:true
+// }
+
+// var config = {
+//     responsive:true
+// };
+
+// Plotly.newPlot('responsive',data,layout);
+
+// line hover 
+
+// var d3 = Plotly.d3,
+//     N = 5,
+//     x = d3.range(N).map(d3.random.normal()),
+//     y = d3.range(N).map(d3.random.normal()),
+//     data = [{ x:x, y:y, type:'scatter', mode:'markers',
+//     name:'test',
+//     marker:{size:16},
+//     hoverinfo:'x+y',
+//     hovertemplate: '<i>Price</i>: $%{y:.2f}' +
+//                    '<br><b>X</b>: %{x}<br>' +
+//                    '<b>%{text}</b>',
+//                    text:["Text A","Text B","Text C","Text C","Text D","Text E"]
+
+//     }];
+
+// var layout = {
+//     hovermode:'closest',
+//     xaxis:{zeroline:false,hoverformat:'.2f'},
+//     yaxis:{zeroline:false,hoverformat:'.2f'}
+// };
+
+// Plotly.newPlot('hv',data,layout);
+
+// text on graph
 
 var layout = {
-    title:'Groceries',
-    yaxis2:{
-        domain:[0.8,1],
-        anchor:'x2'
-    },
-    xaxis2:{
-        domain:[0.8,1],
-        anchor:'y2'
-    }
-}
-
-Plotly.newPlot('combo',data,layout);
+    showlegend:false,
+    annotations:[{
+            x:2,
+            y:3,
+            xref:'x',
+            yref:'y',
+            text:'Look here',
+            showarrow: true,
+            arrowhead:1,
+            ax:0,
+            ay:-40
+         }]
+};
