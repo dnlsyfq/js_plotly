@@ -309,24 +309,35 @@
 
 // text on graph
 
-var layout = {
-    showlegend:false,
-    annotations:[{
-            x:2,
-            y:3,
-            xref:'x',
-            yref:'y',
-            text:'Look here',
-            showarrow: true,
-            arrowhead:1,
-            ax:0,
-            ay:-40
-         }]
-};
+// var layout = {
+//     showlegend:false,
+//     annotations:[{
+//             x:2,
+//             y:3,
+//             xref:'x',
+//             yref:'y',
+//             text:'Look here',
+//             showarrow: true,
+//             arrowhead:1,
+//             ax:0,
+//             ay:-40
+//          }]
+// };
 
-// configuration options
+// configuration options , turn off display bar
 
-Plotly.newPlot('divID',data,layout,
-    {displayModeBar:true},
-    {displaylogo:true}
-);
+// Plotly.newPlot('divID',data,layout,
+//     {displayModeBar:true},
+//     {displaylogo:true}
+// );
+
+// external data 
+
+// Plotly.d3.csv("data.csv",function(err,rows){
+//     function unpack(rows,key){
+//         return rows.map(function(row){return row[key]; });
+//     }
+// })
+
+// error bars 
+
